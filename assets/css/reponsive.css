@@ -1,0 +1,100 @@
+/* PC */
+@media screen and (min-width: 992px) {
+  .toogle-menu {
+    display: none;
+  }
+
+  .mobile-header {
+    position: relative;
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
+}
+
+/* Tablet & moible */
+@media screen and (max-width: 991.98px) {
+  .body {
+    position: relative;
+  }
+
+  .body .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .toogle-menu svg {
+    width: 24px;
+    color: #666;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+  }
+
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40% 0 0;
+    padding: 60px;
+    background: #fff;
+    transform: translateX(-100%);
+    z-index: 2;
+    transition: 0.5s ease;
+  }
+
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  .menu-drawer ul {
+    margin-top: 32px;
+  }
+
+  .menu-drawer ul a {
+    display: block;
+    font-weight: 500;
+    padding: 14px 0;
+    color: #333;
+  }
+
+  .separate {
+    border-top: 1.5px solid #ebebeb;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .show-on-mobile {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+  .menu-drawer {
+    inset: 0 25% 0 0;
+  }
+
+  .action {
+    display: none;
+  }
+}
